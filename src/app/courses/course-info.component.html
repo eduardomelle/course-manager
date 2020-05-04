@@ -2,8 +2,8 @@
 
 <hr>
 
-<form #courseForm="ngForm">
-    
+<form #courseForm="ngForm" *ngIf="course">
+
     <div class="form-group row">
         <label class="col-sm-2 col-form-label">Name:</label>
         <div class="col-sm-10">
@@ -40,8 +40,8 @@
     <div class="form-group row">
         <label class="col-sm-2 col-form-label">Description:</label>
         <div class="col-sm-10">
-            <input name="description" class="form-control" [(ngModel)]="course.description" #courseRating="ngModel"
-                required [ngClass]="{'is-invalid' : courseRating.invalid}" type="number">
+            <input name="description" class="form-control" [(ngModel)]="course.description" #courseDescription="ngModel"
+                required [ngClass]="{'is-invalid' : courseDescription.invalid}">
             <div class="invalid-feedback">
                 <span>Course description is required</span>
             </div>
